@@ -3,6 +3,11 @@
   background-color: var(--color-bg);
   color: var(--color-text);
   position: relative;
+
+  --header-height: 5rem;
+  --footer-height: 5rem;
+  --max-width: 1200px;
+  --padding-x: 1rem;
 }
 
 .app__header {
@@ -14,14 +19,22 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 5rem;
+  height: var(--header-height);
+  display: flex;
+}
+
+.app__header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--padding-x);
+  width: 100%;
 }
 
 .app__main {
-  padding: 6rem 1rem;
-  max-width: 800px;
+  padding: 6rem var(--padding-x);
+  max-width: var(--max-width);
   margin: 0 auto;
-  height: calc(100% - 10rem);
+  height: calc(100% - var(--header-height) - var(--footer-height));
 }
 
 .app__footer {
@@ -32,5 +45,5 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 5rem;
+  height: var(--footer-height);
 }

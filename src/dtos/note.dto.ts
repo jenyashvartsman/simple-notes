@@ -1,6 +1,6 @@
 export type NoteDto = {
   id: string;
-  title: string;
+  note: string;
   createdAt: Date;
 };
 

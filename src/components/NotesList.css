@@ -48,3 +48,10 @@
 .notes__card-delete:hover {
   border-color: var(--color-danger);
 }
+
+.notes__empty {
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 1rem;
+  margin-top: 2rem;
+}
