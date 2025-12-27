@@ -13,7 +13,7 @@ const NotesList = ({ notes, onDeleteNoteClick }: NotesListProps) => {
       <div className="notes__grid">
         {notes.map((note) => (
           <div key={note.id} className="notes__card">
-            <h3 className="notes__card-title">{note.note}</h3>
+            <p className="notes__card-content">{note.note}</p>
             <p className="notes__card-date">
               Created on: {note.createdAt.toDateString()}
             </p>

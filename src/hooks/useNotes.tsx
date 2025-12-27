@@ -11,7 +11,17 @@ const useNotes = () => {
     setNotes((prevNotes) => prevNotes.filter((note) => note.id !== id));
   };
 
-  return { notes, deleteNote };
+  // add note
+  const addNote = (note: string) => {
+    const newNote: NoteDto = {
+      id: crypto.randomUUID(),
+      note: note,
+      createdAt: new Date(),
+    };
+    setNotes((prevNotes) => [newNote, ...prevNotes]);
+  };
+
+  return { notes, deleteNote, addNote };
 };
 
 export default useNotes;

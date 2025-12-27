@@ -3,10 +3,11 @@ import './App.css';
 import NotesList from './components/NotesList';
 import NotesSearch from './components/NotesSearch';
 import useNotes from './hooks/useNotes';
+import NoteAdd from './components/NoteAdd';
 
 function App() {
   // state & hooks
-  const { notes, deleteNote } = useNotes();
+  const { notes, deleteNote, addNote } = useNotes();
   const [searchTerm, setSearchTerm] = useState('');
 
   // filtered notes
@@ -36,7 +37,11 @@ function App() {
       </main>
 
       {/* footer */}
-      <footer className="app__footer">footer</footer>
+      <footer className="app__footer">
+        <div className="app__footer-inner">
+          <NoteAdd onAddNoteClick={addNote} />
+        </div>
+      </footer>
     </div>
   );
 }
