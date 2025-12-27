@@ -1,0 +1,36 @@
+.app {
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  position: relative;
+}
+
+.app__header {
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  box-shadow: var(--color-shadow);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5rem;
+}
+
+.app__main {
+  padding: 6rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  height: calc(100% - 10rem);
+}
+
+.app__footer {
+  padding: 1rem;
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5rem;
+}

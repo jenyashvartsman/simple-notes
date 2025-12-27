@@ -2,6 +2,23 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  font-size: 0.875rem;
+
+  /* Colors */
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-text: #0f172a;
+  --color-muted: #6b7280;
+  --color-primary: #6366f1;
+  --color-primary-700: #4f46e5;
+  --color-accent: #06b6d4;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  --color-border: #e5e7eb;
+  --color-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+  --on-primary: #ffffff;
+  --on-surface: #0f172a;
 }
 
 * {
