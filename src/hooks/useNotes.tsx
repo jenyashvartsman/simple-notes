@@ -3,9 +3,15 @@ import { initialNotes } from '../data/notes.data';
 import type { NoteDto } from '../dtos/note.dto';
 
 const useNotes = () => {
-  const [notes] = useState<NoteDto[]>(structuredClone(initialNotes));
+  // state
+  const [notes, setNotes] = useState<NoteDto[]>(structuredClone(initialNotes));
 
-  return { notes };
+  // delete note
+  const deleteNote = (id: string) => {
+    setNotes((prevNotes) => prevNotes.filter((note) => note.id !== id));
+  };
+
+  return { notes, deleteNote };
 };
 
 export default useNotes;

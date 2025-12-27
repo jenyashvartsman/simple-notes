@@ -3,9 +3,10 @@ import type { NoteDto } from '../dtos/note.dto';
 
 interface NotesListProps {
   notes: NoteDto[];
+  onDeleteNoteClick: (id: string) => void;
 }
 
-const NotesList = ({ notes }: NotesListProps) => {
+const NotesList = ({ notes, onDeleteNoteClick }: NotesListProps) => {
   return (
     <div className="notes">
       {/* notes */}
@@ -17,7 +18,12 @@ const NotesList = ({ notes }: NotesListProps) => {
               Created on: {note.createdAt.toDateString()}
             </p>
             <div className="notes__card-actions">
-              <button className="notes__card-delete">🗑️</button>
+              <button
+                className="notes__card-delete"
+                onClick={() => onDeleteNoteClick(note.id)}
+              >
+                🗑️
+              </button>
             </div>
           </div>
         ))}

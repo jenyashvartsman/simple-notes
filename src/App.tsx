@@ -5,7 +5,7 @@ import NotesSearch from './components/NotesSearch';
 import useNotes from './hooks/useNotes';
 
 function App() {
-  const { notes } = useNotes();
+  const { notes, deleteNote } = useNotes();
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredNotes = useMemo(
@@ -28,7 +28,7 @@ function App() {
       </header>
 
       <main className="app__main">
-        <NotesList notes={filteredNotes} />
+        <NotesList notes={filteredNotes} onDeleteNoteClick={deleteNote} />
       </main>
 
       <footer className="app__footer">footer</footer>
